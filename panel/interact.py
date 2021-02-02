@@ -176,6 +176,7 @@ class interactive(PaneBase):
     # Callback API
     #----------------------------------------------------------------
 
+    @property
     def _synced_params(self):
         return []
 
