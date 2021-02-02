@@ -371,3 +371,15 @@ def edit_readonly(parameterized):
             p.readonly = readonly
         for (p, constant) in zip(params, constants):
             p.constant = constant
+
+
+def updating(fn):
+    def wrapped(self, *args, **kwargs):
+        updating = self._updating
+        self._updating = True
+        try:
+            fn(self, *args, **kwargs)
+        finally:
+            self._updating = updating
+    return wrapped
+
