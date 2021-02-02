@@ -5,12 +5,9 @@ parameters.
 """
 from __future__ import absolute_import, division, unicode_literals
 
-from functools import partial
-
 import param
 
 from ..layout import Row
-from ..io import push, state, unlocked
 from ..reactive import Reactive
 from ..viewable import Layoutable
 
